@@ -15,7 +15,8 @@ source:
   sha256: e73af4cda05e7b787f95892a185f73bdca73cf4606d5d01b904e9037d894e635
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
@@ -23,18 +24,18 @@ build:
 
 requirements:
   build:
+    - posix                # [win]
+    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('m2w64_c') }}  # [win]
+  host:
     - r-base
     - r-settings
     - r-yaml
-    - posix                # [win]
-    - {{native}}toolchain  # [win]
-    - gcc                  # [not win]
 
   run:
     - r-base
     - r-settings
     - r-yaml
-    - libgcc  # [not win]
 
 test:
   commands:
