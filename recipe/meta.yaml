@@ -45,11 +45,12 @@ test:
 
 about:
   home: https://github.com/data-cleaning/validate
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Declare data validation rules and data quality indicators; confront data with them and analyze or visualize the results. The package supports rules that are per-field, in-record, cross-record or cross-dataset. Rules can be automatically analyzed for rule type and connectivity. See also Van der Loo and De Jonge
     (2018) <doi:10.1002/9781118897126>, chapter 6.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
