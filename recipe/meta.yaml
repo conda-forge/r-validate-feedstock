@@ -1,4 +1,4 @@
-{% set version = "0.9.3" %}
+{% set version = "1.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/validate_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/validate/validate_{{ version }}.tar.gz
-  sha256: 847a3afc053e6bf26ba486f61be523e5a795623dac4ef8789703145e4e247932
+  sha256: 04beca1ea6a733a7e113a5789aaa6c87778c8e0caa94aaae3927af4965f69974
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -46,13 +46,10 @@ test:
 about:
   home: https://github.com/data-cleaning/validate
   license: GPL-3
-  summary: Declare data validation rules and data quality indicators; confront data with them
-    and analyze or visualize the results. The package supports rules that are per-field,
-    in-record, cross-record or cross-dataset. Rules can be automatically analyzed for
-    rule type and connectivity. See also Van der Loo and De Jonge (2018) <doi:10.1002/9781118897126>,
-    chapter 6.
+  summary: Declare data validation rules and data quality indicators; confront data with them and analyze or visualize the results. The package supports rules that are per-field, in-record, cross-record or cross-dataset. Rules can be automatically analyzed for rule type and connectivity. See also Van der Loo and De Jonge
+    (2018) <doi:10.1002/9781118897126>, chapter 6.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
