@@ -1,4 +1,4 @@
-{% set version = "1.0.2" %}
+{% set version = "1.0.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/validate_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/validate/validate_{{ version }}.tar.gz
-  sha256: 9f9adb1bf4936d0b42ff3b05aeb0f81cbffde90b89390d68efef97af5861e1aa
+  sha256: ce371d44249398ea044475a46e74b767fd452ea4af1bbee8bc3dffc300786ba2
 
 build:
   merge_build_host: true  # [win]
