@@ -1,4 +1,4 @@
-{% set version = "1.1.6" %}
+{% set version = "1.1.7" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/validate_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/validate/validate_{{ version }}.tar.gz
-  sha256: 9df97b09b7221d4876659478584a529c6e04eaf31d37af7c8a94504c4ff167be
+  sha256: 36dd78b6bd7c0d7c784f745365f57f2be5adefa24d3c0d5ff3dfd3989bc9403f
 
 build:
   number: 0
