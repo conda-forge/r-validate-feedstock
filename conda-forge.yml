@@ -9,5 +9,6 @@ github:
   branch_name: main
   tooling_branch_name: main
 provider:
+  linux_aarch64: default
   win: azure
 test: native_and_emulated
